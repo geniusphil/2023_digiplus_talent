@@ -26,7 +26,7 @@ DIGI+ Talent 跨域數位人才加速躍升計畫
 * 計畫代號：
 
 * 計算資源：
-  * [NCHC Taiwania 3 (台灣杉三號)](https://iservice.nchc.org.tw/)
+  * 
 
 * 軟體安裝路徑
   * `/opt/ohpc/Taiwania3/pkg/biology`
@@ -38,15 +38,15 @@ DIGI+ Talent 跨域數位人才加速躍升計畫
 
   ```bash
   #!/usr/bin/sh
-  #SBATCH -A ACD111077        # Account name/project number
-  #SBATCH -J digiplus_talent  # Job name
-  #SBATCH -p ngs48G           # Partition Name 等同PBS裡面的 -q Queue name
-  #SBATCH -c 14               # 使用的數 請參考Queue資源設定 
-  #SBATCH --mem=46g           # 使用的記憶體量 請參考Queue資源設定
-  #SBATCH -o bwa_out.log          # Path to the standard output file 
-  #SBATCH -e bwa_err.log          # Path to the standard error ouput file
-  #SBATCH --mail-user=genius.philip@gmail.com    # email
-  #SBATCH --mail-type=BEGIN,END              # 指定送出email時機 可為NONE, BEGIN, END, FAIL, REQUEUE, ALL
+  #SBATCH -A ACD111077                         # Account name/project number
+  #SBATCH -J digiplus_talent                   # Job name
+  #SBATCH -p ngs48G                            # Partition Name 等同PBS裡面的 -q Queue name
+  #SBATCH -c 14                                # 使用的數 請參考Queue資源設定 
+  #SBATCH --mem=46g                            # 使用的記憶體量 請參考Queue資源設定
+  #SBATCH -o bwa_out.log                       # Path to the standard output file 
+  #SBATCH -e bwa_err.log                       # Path to the standard error ouput file
+  #SBATCH --mail-user=genius.philip@gmail.com  # email
+  #SBATCH --mail-type=BEGIN,END                # 指定送出email時機 可為NONE, BEGIN, END, FAIL, REQUEUE, ALL
 
   echo 'Hello world!'  ##這邊寫入你要執行的指令
   ```

@@ -1,13 +1,13 @@
 #!/usr/bin/sh
 #SBATCH -A ACD112105        # Account name/project number
 #SBATCH -J gatk_gvcf_job       # Job name
-#SBATCH -p ngs24G           # Partition Name 等同PBS裡面的 -q Queue name
-#SBATCH -c 7               # 使用的數 請參考Queue資源設定 
-#SBATCH --mem=23g           # 使用的記憶體量 請參考Queue資源設定
-#SBATCH -o gatk_gvcf.log          # Path to the standard output file 
-#SBATCH -e gatk_gvcf.log          # Path to the standard error ouput file
+#SBATCH -p ngscourse92G           # Partition Name 等同PBS裡面的 -q Queue name
+#SBATCH -c 10               # 使用的數 請參考Queue資源設定 
+#SBATCH --mem=92g           # 使用的記憶體量 請參考Queue資源設定
+#SBATCH -o /home/p6elin0111/results/gatk_gvcf.log          # Path to the standard output file 
+#SBATCH -e /home/p6elin0111/results/gatk_gvcf_err.log          # Path to the standard error ouput file
 #SBATCH --mail-user=genius.philip@gmail.com    # email
-#SBATCH --mail-type=BEGIN,END              # 指定送出email時機 可為NONE, BEGIN, END, FAIL, REQUEUE, ALL
+#SBATCH --mail-type=ALL             # 指定送出email時機 可為NONE, BEGIN, END, FAIL, REQUEUE, ALL
 
 
 ######################

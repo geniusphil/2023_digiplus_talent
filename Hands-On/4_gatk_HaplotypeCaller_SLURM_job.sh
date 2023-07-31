@@ -1,6 +1,6 @@
 
 #!/usr/bin/sh
-#SBATCH -A ACD111077        # Account name/project number
+#SBATCH -A ACD112105        # Account name/project number
 #SBATCH -J gatk_haplotype_caller_job       # Job name
 #SBATCH -p ngs24G           # Partition Name 等同PBS裡面的 -q Queue name
 #SBATCH -c 7               # 使用的數 請參考Queue資源設定 

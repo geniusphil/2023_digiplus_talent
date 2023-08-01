@@ -23,10 +23,9 @@ DIGI+ Talent 跨域數位人才加速躍升計畫
 
 ## NCHC resource
 
-* 計畫代號：
+* 計畫代號：ACD112105
 
-* 計算資源：
-  * 
+* 計算資源：ngscourse
 
 * 軟體安裝路徑
   * `/opt/ohpc/Taiwania3/pkg/biology`

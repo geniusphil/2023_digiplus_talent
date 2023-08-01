@@ -1,4 +1,4 @@
-# Date: 20220718
+# Date: 20230801
 # Annovar database download
 # Reference genome version: GRCh37/hg19 | GRCh38/hg38
 # URL: http://annovar.openbioinformatics.org/en/latest/user-guide/download/

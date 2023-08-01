@@ -1,9 +1,9 @@
 #!/usr/bin/sh
 #SBATCH -A ACD112105        # Account name/project number
 #SBATCH -J sambamba_sort_job       # Job name
-#SBATCH -p ngscourse92G           # Partition Name 等同PBS裡面的 -q Queue name
-#SBATCH -c 10               # 使用的數 請參考Queue資源設定 
-#SBATCH --mem=92g           # 使用的記憶體量 請參考Queue資源設定
+#SBATCH -p ngscourse           # Partition Name 等同PBS裡面的 -q Queue name
+#SBATCH -c 2              # 使用的數 請參考Queue資源設定 
+#SBATCH --mem=16g           # 使用的記憶體量 請參考Queue資源設定
 #SBATCH -o /home/p6elin0111/results/sambamba_sort_out.log          # Path to the standard output file 
 #SBATCH -e /home/p6elin0111/results/sambamba_sort_err.log          # Path to the standard error ouput file
 #SBATCH --mail-user=genius.philip@gmail.com    # email

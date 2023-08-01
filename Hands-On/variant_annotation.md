@@ -2,7 +2,7 @@
 
 ### NGS Variant Annotation: Hands-on session
 ---
-* Date: 2020.8.24-25
+* Date: 2023.8.1
 * Place: NHGRI
 * Software download
     * URL: http://annovar.openbioinformatics.org/en/latest/

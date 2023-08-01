@@ -3,7 +3,7 @@
   #SBATCH -J anno_job       # Job name
   #SBATCH -p ngscourse           # Partition Name 等同PBS裡面的 -q Queue name
   #SBATCH -c 2               # 使用的數 請參考Queue資源設定 
-  #SBATCH --mem=16g           # 使用的記憶體量 請參考Queue資源設定
+  #SBATCH --mem=13g           # 使用的記憶體量 請參考Queue資源設定
   #SBATCH -o /home/p6elin0111/results/anno.log          # Path to the standard output file 
   #SBATCH -e /home/p6elin0111/results/anno_err.log          # Path to the standard error ouput file
   #SBATCH --mail-user=genius.philip@gmail.com    # email
@@ -30,10 +30,15 @@ BWA="/opt/ohpc/Taiwania3/pkg/biology/BWA/BWA_v0.7.17/bwa"
 GATK4="/opt/ohpc/Taiwania3/pkg/biology/GATK/gatk_v4.2.3.0/gatk"
 SAMTOOLS="/opt/ohpc/Taiwania3/pkg/biology/SAMTOOLS/SAMTOOLS_v1.13/bin/samtools"
 SAMBAMBA="/opt/ohpc/Taiwania3/pkg/biology/sambamba/sambamba_v0.8.1/sambamba"
+ANNOVAR_CONVERT="/opt/ohpc/Taiwania3/pkg/biology/ANNOVAR/annovar_20210819/convert2annovar.pl"
+ANNOVAR_TAB="/opt/ohpc/Taiwania3/pkg/biology/ANNOVAR/annovar_20210819/table_annovar.pl"
 ######################
 
-$ANNOVAR_TAB HG00403.chr20.gatk.avinput /work1/ACD109058/humandb/ -buildver hg38 \
--out HG00403.chr20.gatk \
+$ANNOVAR_CONVERT format vcf4 ${PREFIX}_allsites.vcf.gz > ${PREFIX}.gatk.avinput
+
+##
+$ANNOVAR_TAB ${PREFIX}.gatk.avinput /work/humandb/ -buildver hg38 \
+-out ${PREFIX}.gatk \
 -remove \
 -protocol refGene,ensGene,cytoBand,genomicSuperDups,gwasCatalog,avsnp150,esp6500siv2_all,1000g2015aug_all,1000g2015aug_afr,1000g2015aug_amr,1000g2015aug_eur,1000g2015aug_eas,1000g2015aug_sas,nci60,clinvar_20180603,gnomad211_genome,exac03,intervar_20180118,dbnsfp31a_interpro \
 -operation g,g,r,r,r,f,f,f,f,f,f,f,f,f,f,f,f,f,f -otherinfo -nastring NA

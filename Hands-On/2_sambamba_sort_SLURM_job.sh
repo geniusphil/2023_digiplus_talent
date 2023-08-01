@@ -3,7 +3,7 @@
 #SBATCH -J sambamba_sort_job       # Job name
 #SBATCH -p ngscourse           # Partition Name 等同PBS裡面的 -q Queue name
 #SBATCH -c 2              # 使用的數 請參考Queue資源設定 
-#SBATCH --mem=16g           # 使用的記憶體量 請參考Queue資源設定
+#SBATCH --mem=13g           # 使用的記憶體量 請參考Queue資源設定
 #SBATCH -o /home/p6elin0111/results/sambamba_sort_out.log          # Path to the standard output file 
 #SBATCH -e /home/p6elin0111/results/sambamba_sort_err.log          # Path to the standard error ouput file
 #SBATCH --mail-user=genius.philip@gmail.com    # email
@@ -32,7 +32,7 @@ SAMBAMBA="/opt/ohpc/Taiwania3/pkg/biology/sambamba/sambamba_v0.8.1/sambamba"
 ######################
 
 $SAMBAMBA sort \
--t 3 \
+-t 2 \
 -m 4G \
 --tmpdir $TMP_DIR \
 $OUTPUT_DIR/$PREFIX.bam \

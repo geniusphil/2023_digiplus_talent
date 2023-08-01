@@ -3,7 +3,7 @@
 #SBATCH -J annosv_job       # Job name
 #SBATCH -p ngscourse           # Partition Name 等同PBS裡面的 -q Queue name
 #SBATCH -c 2               # 使用的數 請參考Queue資源設定 
-#SBATCH --mem=16g           # 使用的記憶體量 請參考Queue資源設定
+#SBATCH --mem=13g           # 使用的記憶體量 請參考Queue資源設定
 #SBATCH -o /home/p6elin0111/results/annosv.log          # Path to the standard output file 
 #SBATCH -e /home/p6elin0111/results/annosv_err.log          # Path to the standard error ouput file
 #SBATCH --mail-user=genius.philip@gmail.com    # email

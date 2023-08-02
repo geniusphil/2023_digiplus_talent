@@ -39,4 +39,5 @@ HaplotypeCaller \
 -I $OUTPUT_DIR/${PREFIX}_sorted_rmdup.bam \
 --dbsnp $DBSNP_HG38 \
 -stand-call-conf 50.0 \
+-ERC GVCF \
 -O $OUTPUT_DIR/${PREFIX}_allsites.g.vcf.gz
